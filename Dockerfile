@@ -33,4 +33,4 @@ VOLUME ["/app/115-cookie.txt"]
 EXPOSE 8091
 
 # 启动命令
-CMD ["python", "-m", "p115tiny302", "--host", "0.0.0.0", "--port", "8090"]
+CMD ["python", "-m", "p115tiny302", "--host", "0.0.0.0", "--port", "8091"]
