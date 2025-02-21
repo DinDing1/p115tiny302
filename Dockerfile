@@ -1,6 +1,14 @@
 # 使用Python 3.12 slim镜像
 FROM python:3.12-slim
 
+# 安装编译工具链
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    g++ \
+    libc-dev \
+    make \
+    && rm -rf /var/lib/apt/lists/*
+
 # 安装项目依赖
 RUN pip install --no-cache-dir p115tiny302
 
